@@ -1,11 +1,11 @@
-local Rayfield = loadstring(game:HttpGet('https://[Log in to view URL]'))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
    Name = "🗒️ Universal Script 🗒️",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Example title",
    LoadingSubtitle = "by Ronaldo_H55",
-   Theme = "Default", -- Check https://[Log in to view URL]
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -47,7 +47,7 @@ Rayfield:Notify({
 local Button = MainTab:CreateButton({
    Name = "Infinite Jump",
    Callback = function()
-        loadstring(game:HttpGet("https://[Log in to view URL]"))()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt"))()
    end,
 })
 
