@@ -99,7 +99,12 @@ local Section = Tab:CreateSection("Players")
 local Button = Tab:CreateButton({
    Name = "COMING SOON!!",
    Callback = function()
-   -- The function that takes place when the button is pressed
+        Rayfield:Notify({
+   Title = "This Button Currently Is In Work.",
+   Content = "This Option Is Coming Soon!!!",
+   Duration = 6.5,
+   Image = 4483362458,
+})
    end,
 })
 
