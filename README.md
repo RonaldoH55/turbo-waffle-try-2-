@@ -3,8 +3,8 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "🗒️ Universal Script 🗒️",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Example title",
-   LoadingSubtitle = "by Ronaldo_H55",
+   LoadingTitle = "Loading Universal Script!",
+   LoadingSubtitle = "Created By Ronaldo_H55",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
@@ -39,15 +39,23 @@ local MainSection = MainTab:CreateSection("Main")
 
 Rayfield:Notify({
    Title = "You executed the script successfully!",
-   Content = "Very gud i guess.",
-   Duration = 5,
+   Content = "[UPDATED AND WORKING 100%]",
+   Duration = 7,
    Image = nil,
 })
 
 local Button = MainTab:CreateButton({
    Name = "Infinite Jump",
    Callback = function()
-        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Infinite%20Jump.txt"))()
+--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+local InfiniteJumpEnabled = true
+game:GetService("UserInputService").JumpRequest:connect(function()
+	if InfiniteJumpEnabled then
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+	end
+end)
    end,
 })
 
