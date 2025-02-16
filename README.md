@@ -93,6 +93,16 @@ local Slider = MainTab:CreateSlider({
    end,
 })
 
+local Tab = Window:CreateTab("🧑Player", nil) -- Title, Image
+local Section = Tab:CreateSection("Players")
+
+local Button = Tab:CreateButton({
+   Name = "COMING SOON!!",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+
 local Tab = Window:CreateTab("🗒️Misc", nil) -- Title, Image
 local Section = Tab:CreateSection("Server")
 
