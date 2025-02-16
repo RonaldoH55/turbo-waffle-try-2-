@@ -63,7 +63,7 @@ loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\
 
 local Slider = MainTab:CreateSlider({
    Name = "WalkSpeed",
-   Range = {16, 60},
+   Range = {16, 700},
    Increment = 1,
    Suffix = "Speed",
    CurrentValue = 16,
@@ -90,6 +90,21 @@ local Section = Tab:CreateSection("Server")
 
 local Button = Tab:CreateButton({
    Name = "Rejoin",
+   Callback = function()
+        local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+
+
+ts:TeleportToPlaceInstance(game.PlaceId, game.JobId, p)
+   end,
+})
+
+local Divider = Tab:CreateDivider()
+
+local Button = Tab:CreateButton({
+   Name = "Destroy",
    Callback = function()
         local ts = game:GetService("TeleportService")
 
