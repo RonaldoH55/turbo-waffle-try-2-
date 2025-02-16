@@ -96,7 +96,7 @@ local Slider = MainTab:CreateSlider({
 local Tab = Window:CreateTab("🧑Player", nil) -- Title, Image
 local Section = Tab:CreateSection("Players")
 
-local Button = Tab:CreateButton({
+local Button = PlayerTab:CreateButton({
    Name = "COMING SOON!!",
    Callback = function()
         Rayfield:Notify({
