@@ -5,7 +5,7 @@ local Window = Rayfield:CreateWindow({
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading Universal Script!",
    LoadingSubtitle = "Created By Ronaldo_H55",
-   Theme = "AmberGlow", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Theme = "Bloom", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
@@ -69,6 +69,9 @@ loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\
    end,
 })
 
+local Tab = Window:CreateTab("🧑Player", nil) -- Title, Image
+local Section = Tab:CreateSection("Players")
+
 local Slider = MainTab:CreateSlider({
    Name = "WalkSpeed",
    Range = {16, 700},
@@ -92,10 +95,6 @@ local Slider = MainTab:CreateSlider({
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
    end,
 })
-
-local Tab = Window:CreateTab("🧑Player", nil) -- Title, Image
-local Section = Tab:CreateSection("Players")
-
 
 local Tab = Window:CreateTab("🗒️Misc", nil) -- Title, Image
 local Section = Tab:CreateSection("Server")
