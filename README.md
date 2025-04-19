@@ -5,20 +5,20 @@ local Window = Rayfield:CreateWindow({
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "Loading Universal Script!",
    LoadingSubtitle = "Created By Ronaldo_H55",
-   Theme = "AmberGlow", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
    DisableRayfieldPrompts = false,
    DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
 
    ConfigurationSaving = {
-      Enabled = true,
+      Enabled = false,
       FolderName = nil, -- Create a custom folder for your hub/game
       FileName = "File example"
    },
 
    Discord = {
       Enabled = True, -- Prompt the user to join your Discord server if their executor supports it
-      Invite = "jmpZPyJd", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
       RememberJoins = true -- Set this to false to make them join the discord every time they load it up
    },
 
@@ -26,11 +26,11 @@ local Window = Rayfield:CreateWindow({
    KeySettings = {
       Title = "Universal | Key",
       Subtitle = "Link In Discord Server",
-      Note = "Join Server From Link", -- Use this to tell the user how to get a key
+      Note = "Join Server From Misc Tab", -- Use this to tell the user how to get a key
       FileName = "ExampleFileName", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
-      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
-      GrabKeyFromSite = true , -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-      Key = {"K383V9M1X8"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = True , -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"RonaldoIsProbablyTheGoat"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 }) 
 
@@ -39,7 +39,7 @@ local MainSection = MainTab:CreateSection("Main")
 
 Rayfield:Notify({
    Title = "You executed the script successfully!",
-   Content = "Work In Progress!",
+   Content = "[UPDATED AND WORKING 100%]",
    Duration = 7,
    Image = nil,
 })
@@ -69,8 +69,6 @@ loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\
    end,
 })
 
-local MainSection = MainTab:CreateSection("Player") --here2
-
 local Slider = MainTab:CreateSlider({
    Name = "WalkSpeed",
    Range = {16, 700},
@@ -95,14 +93,9 @@ local Slider = MainTab:CreateSlider({
    end,
 })
 
-local MainSection = MainTab:CreateSection("Other")
+local Tab = Window:CreateTab("🧑Player", nil) -- Title, Image
+local Section = Tab:CreateSection("Players")
 
-local Button = MainTab:CreateButton({ --here
-   Name = "Esp",
-   Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/Lucasfin000/SpaceHub/main/UESP'))()
-   end,
-})
 
 local Tab = Window:CreateTab("🗒️Misc", nil) -- Title, Image
 local Section = Tab:CreateSection("Server")
@@ -215,5 +208,15 @@ end
 
 -- If you'd like to use a script before server hopping (Like a Automatic Chest collector you can put the Teleport() after it collected everything.
 Teleport()
+   end,
+})
+
+local Tab = Window:CreateTab("💬Chat bypassers", nil) -- Title, Image
+local Section = Tab:CreateSection("Bypassers")
+
+local Button = Tab:CreateButton({
+   Name = "1. AnnaBypasser",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua",true))()
    end,
 })
