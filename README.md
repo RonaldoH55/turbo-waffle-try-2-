@@ -220,10 +220,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypass
    end,
 })
 
-local Tab = Window:CreateTab("🔨Test", nil) -- Title, Image
+local Tab = Window:CreateTab("🔨Test [You can use ig]", nil) -- Title, Image
 local Section = Tab:CreateSection("Bypassers")
 
-local Slider = MainTab:CreateSlider({
+local Slider = Tab:CreateSlider({
    Name = "Fly slider",
    Range = {0, 200},
    Increment = 1,
@@ -234,3 +234,5 @@ local Slider = MainTab:CreateSlider({
         game.Players.LocalPlayer.Character.Humanoid.Fly = (Value)
    end,
 })
+
+local Tab = Window:CreateTab("📱Discord: kingmrcampbell📱", nil) -- Title, Image
