@@ -84,7 +84,7 @@ local Slider = Tab:CreateSlider({
    end,
 })
 
-local Slider = Tab:CreateSlider({
+local Slider = MainTab:CreateSlider({
    Name = "JumpPower",
    Range = {0, 200},
    Increment = 1,
@@ -217,5 +217,20 @@ local Button = Tab:CreateButton({
    Name = "1. AnnaBypasser",
    Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AnnaRoblox/AnnaBypasser/refs/heads/main/AnnaBypasser.lua",true))()
+   end,
+})
+
+local Tab = Window:CreateTab("🔨Test", nil) -- Title, Image
+local Section = Tab:CreateSection("Bypassers")
+
+local Slider = MainTab:CreateSlider({
+   Name = "Fly slider",
+   Range = {0, 200},
+   Increment = 1,
+   Suffix = "Fly",
+   CurrentValue = 0,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.Fly = (Value)
    end,
 })
