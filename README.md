@@ -72,7 +72,7 @@ loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\
 local Tab = Window:CreateTab("🧑Player", nil) -- Title, Image
 local Section = Tab:CreateSection("Players")
 
-local Slider = MainTab:CreateSlider({
+local Slider = Tab:CreateSlider({
    Name = "WalkSpeed",
    Range = {16, 700},
    Increment = 1,
@@ -84,7 +84,7 @@ local Slider = MainTab:CreateSlider({
    end,
 })
 
-local Slider = MainTab:CreateSlider({
+local Slider = Tab:CreateSlider({
    Name = "JumpPower",
    Range = {0, 200},
    Increment = 1,
